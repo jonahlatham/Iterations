@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="Play.css">
+</head>
+<body>
+    <div class="all-it">
+        <div><h1>Calculate!</h1></div>
+        <input class="input" id="multiples" placeholder="Multiples" type="number">
+        <br>
+        <input class="input" id="slots" placeholder="Iterations" type="number">
+        <br>
+        <button onclick="multiples()">Run</button>
+        <div id="div" class="numbers-box"></div>
+    </div>
+
+<script>
+
+const multiples = () => {
+    let multi = document.getElementById('multiples').value
+    let slot = document.getElementById('slots').value
+    z=[]
+    for (i=1; i<=slot; i++){
+        z.push(`<div> ${multi} * ${i} = ${i * multi}</div>`)
+    } 
+    document.getElementById('div').innerHTML = z.join(' ');
+}
+ 
+</script>
+</body>
+</html>
